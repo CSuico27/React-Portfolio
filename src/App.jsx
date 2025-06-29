@@ -1,7 +1,7 @@
 // src/App.jsx
 import React, { useState } from "react";
 
-import Loader from "./components/loader";
+import Loader from "./components/Loader";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
