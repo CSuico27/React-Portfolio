@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-geist: 
+}
+
+
+@font-face {
+    font-family: AppleGaramond;
+    src: url("./components/fonts/AppleGaramond-Light.ttf") format("truetype");
+  }
+@theme {
+    --font-apple: AppleGaramond, sans-serif;
+  }
+
+  @layer components {
+  .underline-animation {
+    @apply relative inline-flex items-center gap-1 text-[#f5f5f5] hover:text-[#c3bcb4] transition-colors duration-300;
+  }
+
+  .underline-animation::after {
+    content: '';
+    @apply absolute left-0 -bottom-0.5 w-0 h-[1px] bg-[#c3bcb4] transition-all duration-300;
+  }
+
+  .underline-animation:hover::after {
+    @apply w-[70%];
+  }
+
+  .arrow-animate {
+    @apply transition-transform duration-300 mt-2;
+  }
+
+  .underline-animation:hover .arrow-animate {
+    @apply -rotate-90;
+  }
+}
